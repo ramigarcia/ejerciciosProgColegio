@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Creación de un portal con PHP y MySQL</title>
+  <style>
+    p {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body link="#e5e5e5" vlink="e0e0e0" font-size="2" bgcolor="#303030" text="#e5e5e5">
+  <font face="tahoma">
+    <p align="center">
+      <strong>FORMULARIO DE CONTACTO</strong>
+      <br><br>
+    <p>Inserte los datos que se solicitan y en breve nos pondremos en contacto con usted</p>
+
+    <form action="contacto.php" name="contacto" method="POST">
+      <table border="2" width="90%" align="center" border-color="#cccccc">
+        <tr>
+          <td width="15%">
+            <p><strong>NOMBRE:</strong></p>
+          </td>
+          <td colspan="3">
+            <input type="text" name="nombre" value="" size="109">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p><strong>APELLIDOS:</strong></p>
+          </td>
+          <td colspan="3">
+            <input type="text" name="apellidos" size="109">
+          </td>
+        </tr>
+        <tr>
+          <td width="15%">
+            <p><strong>DIRECCIÓN:</strong></p>
+          </td>
+          <td width="25%">
+            <input type="text" name="direccion" size="109">
+          </td>
+        </tr>
+        <tr>
+          <td width="15%">
+            <p><strong>LOCALIDAD:</strong></p>
+          </td>
+          <td width="25%">
+            <input type="text" name="localidad" size="36">
+          </td>
+          <td width="15%">
+            <p><strong>PROVINCIA</strong></p>
+          </td>
+          <td width="25%">
+            <input type="text" name="provincia" size="36">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p><strong>TELEFONO</strong></p>
+          </td>
+          <td>
+            <input type="text" name="telefono" size="36">
+          </td>
+          <td>
+            <p><strong>E-MAIL:</strong></p>
+          </td>
+          <td>
+            <input type="text" name="email" size="36">
+          </td>
+        </tr>
+      </table>
+      <p>
+        <input type="submit" name="Submit" value="Enviar datos">
+      </p>
+    </form>
+</body>
+
+</html>
