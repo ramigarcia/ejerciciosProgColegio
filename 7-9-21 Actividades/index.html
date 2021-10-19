@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+  <title>Formulario con action PHP</title>
+</head>
+
+<body>
+  <form action="" id="form" method="POST">
+    <label for="nombre">Ingrese su nombre</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+
+    <label for="edad">Ingrese su edad</label>
+    <input type="number" id="edad" name="edad" placeholder="Ingrese su edad" required>
+
+    <label for="fecha">Fecha de nacimiento</label>
+    <input type="date" id="fecha" name="fecha" required>
+
+    <input type="submit" id="btn_submit" value="Enviar">
+  </form>
+
+  <div class="modal modal-hidden">
+    <button class="x"><i class='bx bx-x'></i></button>
+    <h1 class="title">Datos</h1>
+    <div class="modal__dates">
+      <p class="modal__name">Nombre: <span id="modal_nombre"></span></p>
+      <p class="modal__edad">Edad: <span id="modal_edad"></span></p>
+      <p class="modal__fecha">Fecha de nacimiento: <span id="modal_fecha"></span></p>
+    </div>
+  </div>
+  <script>
+    alert('Hola, antes de comenzar debo informarte que actualmente tus datos se van a tratar con javascript, lo podes cambiar en el codigo, agregando al form action="action.php"');
+  </script>
+  <script src="./action.js"></script>
+  <script>
+    const x = document.querySelector('.x');
+
+    x.addEventListener('click', () => {
+      modal.classList.remove("modal-show");
+      modal.classList.add("modal-hidden");
+
+      form.reset()
+    })
+  </script>
+</body>
+
+</html>

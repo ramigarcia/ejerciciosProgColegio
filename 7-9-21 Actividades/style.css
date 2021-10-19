@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    to right bottom,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+  background-repeat: no-repeat;
+  font-family: system-ui;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  border-bottom: white 2px solid;
+  background-color: rgb(64, 71, 86);
+  width: 350px;
+  height: 400px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 22px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+form input {
+  padding: 13px 10px;
+  outline: none;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: rgba(43, 147, 250, 0.7);
+}
+
+form input::placeholder {
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+form #btn_submit {
+  cursor: pointer;
+}
+
+.modal-hidden {
+  transform: translateY(-200%);
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-show {
+  transform: translateY(0%);
+  transition: all 0.3s ease-in-out;
+}
+
+.modal {
+  position: absolute;
+  z-index: 5;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 390px;
+  height: 400px;
+  background-color: white;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 13px 14px 6px rgba(64, 71, 86, 0.3);
+}
+
+.modal .x {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal .title {
+  margin-top: 15px;
+  color: #404756;
+  font-size: 35px;
+}
+
+.modal .modal__dates {
+  margin: 25px auto auto;
+  width: 85%;
+  display: grid;
+  place-items: center;
+  height: 200px;
+}
+
+.modal p {
+  border-radius: 15px;
+  box-shadow: 10px 7px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 5px;
+  margin: 10px auto;
+  font-size: 21px;
+  font-weight: 600;
+  text-align: left;
+  color: #6992de;
+}
+
+.modal p.modal__name {
+  text-transform: capitalize;
+}
+
+.modal span {
+  color: #334b49;
+}
